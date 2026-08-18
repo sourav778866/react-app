@@ -29,7 +29,7 @@ function App() {
 };
 
 try {
-  const response = await fetch("http://localhost:8080/ai", {
+  const response = await fetch("https://hireflow-7szo.onrender.com/ai", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
