@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import ResumeUpload from "./components/ResumeUpload";
 import JobDescription from "./components/JobDescription";
-
+const AI_URL = import.meta.env.VITE_AI_URL;
 function App() {
   const [resume, setResume] = useState(null);
   const [jobDescription, setJobDescription] = useState("");
@@ -29,7 +29,7 @@ function App() {
 };
 
 try {
-  const response = await fetch("https://hireflow-7szo.onrender.com/ai", {
+  const response = await fetch(AI_URL+"/ai", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
